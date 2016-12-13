@@ -1,0 +1,9 @@
+*.iml
+*.project
+**/.idea/
+**/lib/
+**/target/
+**/out/
+logs
+*.log
+*.jar
