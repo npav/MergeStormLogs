@@ -36,7 +36,9 @@ public class CombineLogs {
     logs = new PriorityQueue<>(new TimestampComparator());
     File baseDir = new File(BASE_DIR);
     for (File node : baseDir.listFiles()) {
-      loadThisNodeLogs(node);
+      if (node.isDirectory()) {
+        loadThisNodeLogs(node);
+      }
     }
   }
 
